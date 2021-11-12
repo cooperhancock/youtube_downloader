@@ -20,7 +20,7 @@ try:
 	yt = YouTube(link) 
 except: 
 	print("Connection Error") #to handle exception 
-stream = yt.streams.filter(progressive=True).first()
+stream = yt.streams.filter(progressive=True).last()
 print(stream)
 stream.download(SAVE_PATH)
 
