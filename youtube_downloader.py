@@ -1,9 +1,10 @@
 # importing the module 
 from pytube import YouTube 
 import os
+from pathlib import Path
 
 # where to save - default downloads folder
-SAVE_PATH = os.path.expanduser("~")+"\Downloads\\" 
+SAVE_PATH = str(Path(os.path.expanduser("~")) / "Downloads")
 
 # check save path
 print(SAVE_PATH)
